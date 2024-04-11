@@ -1,6 +1,6 @@
 {
-  "name": "sails.io.js",
-  "version": "1.2.2",
+  "name": "sails.io.js-v2",
+  "version": "1.2.3",
   "description": "Javascript SDK for communicating w/ a Sails server via WebSockets/socket.io.",
   "main": "sails.io.js",
   "directories": {
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/balderdashy/sails.io.js.git"
+    "url": "git://github.com/ImoucheG/sails.io.js.git"
   },
   "keywords": [
     "sails",

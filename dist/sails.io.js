@@ -36,7 +36,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
 
 /**
  * sails.io.js
- * v1.2.2
+ * v1.2.3
  * ------------------------------------------------------------------------
  * JavaScript Client (SDK) for communicating with Sails.
  *
@@ -138,7 +138,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
    * @type {Dictionary}
    */
   var SDK_INFO = {
-    version: '1.2.2', // <-- pulled automatically from package.json, do not change!
+    version: '1.2.3', // <-- pulled automatically from package.json, do not change!
     language: 'javascript',
     platform: (function (){
       if (typeof module === 'object' && typeof module.exports !== 'undefined') {
