@@ -685,7 +685,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
       var _opts = {};
       SOCKET_OPTIONS.forEach(function(option) {
         // Okay to change global headers while socket is connected
-        if (option == 'headers') {return;}
+        if (['headers', 'path'].includes(option)) {return;}
         Object.defineProperty(self, option, {
           get: function() {
             if (option == 'url') {
@@ -1196,13 +1196,13 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
      */
     SailsSocket.prototype.off = function (evName, fn){
 
-      // Bind the event to the raw underlying socket if possible.
+      // Unbind the event from the raw underlying socket if possible.
       if (this._raw) {
         this._raw.off(evName, fn);
         return this;
       }
 
-      // Otherwise queue the event binding.
+      // Otherwise unqueue the queued event binding.
       if (this.eventQueue[evName] && this.eventQueue[evName].indexOf(fn) > -1) {
         this.eventQueue[evName].splice(this.eventQueue[evName].indexOf(fn), 1);
       }
