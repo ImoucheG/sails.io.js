@@ -36,7 +36,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
 
 /**
  * sails.io.js
- * v1.2.3
+ * v1.2.4
  * ------------------------------------------------------------------------
  * JavaScript Client (SDK) for communicating with Sails.
  *
@@ -138,7 +138,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
    * @type {Dictionary}
    */
   var SDK_INFO = {
-    version: '1.2.3', // <-- pulled automatically from package.json, do not change!
+    version: '1.2.4', // <-- pulled automatically from package.json, do not change!
     language: 'javascript',
     platform: (function (){
       if (typeof module === 'object' && typeof module.exports !== 'undefined') {
@@ -685,7 +685,7 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
       var _opts = {};
       SOCKET_OPTIONS.forEach(function(option) {
         // Okay to change global headers while socket is connected
-        if (['headers', 'path'].includes(option)) {return;}
+        if (['headers', 'path', 'rejectUnauthorized'].includes(option)) {return;}
         Object.defineProperty(self, option, {
           get: function() {
             if (option == 'url') {
